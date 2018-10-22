@@ -6,8 +6,9 @@ import config from '../webpack.config.dev';
 
 const port = 3000;
 const app = express();
-
 const compiler = webpack(config);
+
+
 
 app.use( require('webpack-dev-middleware')(compiler, {
     noInfo: true,
@@ -20,7 +21,7 @@ app.get('/', function(req, res){
 
 app.listen( port, function(err) {
     if(err) {
-        console.log('error occured');
+        console.log('error occured'); //  eslint-disable-line no-console
     }
     else {
         open('http://localhost:' + port);
