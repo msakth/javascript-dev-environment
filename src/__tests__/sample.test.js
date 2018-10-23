@@ -8,7 +8,7 @@ configure({ adapter: new EnzymeAdapter() });
 describe('App Tsting', () => {
     
     it('should render App without crashing', () => {
-        shallow(<Aplp/>)
+        shallow(<App/>)
     });
 
 });
